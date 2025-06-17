@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_slate_bricks_small": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hexcasting:slate_bricks_small"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hexdeco:stonecutting/slate_bricks_mini_slab_from_slate_bricks_small"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_slate_bricks_small",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hexdeco:stonecutting/slate_bricks_mini_slab_from_slate_bricks_small"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "hexcasting:block/akashic_record",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "inner": "hexdeco:block/jungle_akashic_ligature",
+    "outer": "hexdeco:block/jungle_akashic_record",
+    "particle": "hexdeco:block/jungle_akashic_ligature"
+  }
+}

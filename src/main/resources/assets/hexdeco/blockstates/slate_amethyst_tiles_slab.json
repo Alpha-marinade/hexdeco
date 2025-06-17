@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hexdeco:block/slate_amethyst_tiles_slab"
+    },
+    "type=double": {
+      "model": "hexcasting:block/deco/slate_amethyst_tiles"
+    },
+    "type=top": {
+      "model": "hexdeco:block/slate_amethyst_tiles_slab_top"
+    }
+  }
+}

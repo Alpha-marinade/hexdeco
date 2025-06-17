@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hexdeco:block/slate_bricks_mini_slab"
+    },
+    "type=double": {
+      "model": "hexcasting:block/deco/slate_bricks_small"
+    },
+    "type=top": {
+      "model": "hexdeco:block/slate_bricks_mini_slab_top"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hexdeco:block/slate_slab"
+    },
+    "type=double": {
+      "model": "hexcasting:block/slate_block"
+    },
+    "type=top": {
+      "model": "hexdeco:block/slate_slab_top"
+    }
+  }
+}

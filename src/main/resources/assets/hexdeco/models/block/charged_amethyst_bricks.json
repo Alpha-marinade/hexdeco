@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "hexdeco:block/charged_amethyst_bricks"
+  }
+}

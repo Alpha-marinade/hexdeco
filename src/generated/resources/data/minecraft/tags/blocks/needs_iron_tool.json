@@ -1,0 +1,27 @@
+{
+  "values": [
+    "hexdeco:amethyst_bricks_slab",
+    "hexdeco:amethyst_bricks_mini_slab",
+    "hexdeco:amethyst_tiles_slab",
+    "hexdeco:amethyst_bricks_stairs",
+    "hexdeco:amethyst_bricks_mini_stairs",
+    "hexdeco:amethyst_tiles_stairs",
+    "hexdeco:slate_tiles_stairs",
+    "hexdeco:slate_bricks_mini_stairs",
+    "hexdeco:slate_bricks_stairs",
+    "hexdeco:slate_stairs",
+    "hexdeco:slate_tiles_slab",
+    "hexdeco:slate_bricks_mini_slab",
+    "hexdeco:slate_bricks_slab",
+    "hexdeco:slate_slab",
+    "hexdeco:charged_amethyst_block",
+    "hexdeco:charged_amethyst_bricks",
+    "hexdeco:charged_amethyst_slab",
+    "hexdeco:charged_amethyst_bricks_slab",
+    "hexdeco:charged_amethyst_lamp",
+    "hexdeco:charged_amethyst_stairs",
+    "hexdeco:charged_amethyst_bricks_stairs",
+    "hexdeco:slate_amethyst_tiles_stairs",
+    "hexdeco:slate_amethyst_tiles_slab"
+  ]
+}

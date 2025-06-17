@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "hexdeco:block/oak_akashic_ligature"
+  }
+}

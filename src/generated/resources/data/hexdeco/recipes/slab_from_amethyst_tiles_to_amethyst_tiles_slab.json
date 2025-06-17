@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "hexcasting:amethyst_tiles"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "hexdeco:amethyst_tiles_slab"
+  },
+  "show_notification": true
+}

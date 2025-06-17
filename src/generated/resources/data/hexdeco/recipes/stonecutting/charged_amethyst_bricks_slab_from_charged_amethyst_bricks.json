@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "hexdeco:charged_amethyst_bricks"
+  },
+  "result": "hexdeco:charged_amethyst_bricks_slab"
+}

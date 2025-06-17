@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.marinade.neverland.hexdeco.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "hexdeco.refmap.json",
+  "mixins": [
+
+  ],
+  "client": [
+    "AkashicColorizerMixin"
+  ],
+
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "hexcasting:akashic_record"
+    },
+    {
+      "item": "minecraft:bamboo_planks"
+    }
+  ],
+  "result": {
+    "item": "hexdeco:bamboo_akashic_record"
+  }
+}

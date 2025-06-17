@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_akashic_connector": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hexcasting:akashic_connector"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_mangrove_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:mangrove_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hexdeco:shapeless_mangrove_akashic_ligature_from_akashic_connector_and_mangrove_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_akashic_connector",
+      "has_mangrove_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hexdeco:shapeless_mangrove_akashic_ligature_from_akashic_connector_and_mangrove_planks"
+    ]
+  },
+  "sends_telemetry_event": false
+}

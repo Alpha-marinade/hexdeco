@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "hexcasting:slate_tiles"
+  },
+  "result": "hexdeco:slate_tiles_stairs"
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "hexcasting:block/akashic_bookshelf",
+  "textures": {
+    "overlay": "hexdeco:block/akashic_bookshelf_overlay",
+    "front": "hexdeco:block/warped_akashic_bookshelf",
+    "particle": "hexdeco:block/warped_akashic_bookshelf_vert",
+    "side": "hexdeco:block/warped_akashic_bookshelf_horiz",
+    "top_bottom": "hexdeco:block/warped_akashic_bookshelf_vert"
+  }
+}

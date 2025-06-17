@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": {
+      "item": "hexcasting:amethyst_dust"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "S": {
+      "item": "hexcasting:slate"
+    }
+  },
+  "pattern": [
+    "GDG",
+    "DSD",
+    "GDG"
+  ],
+  "result": {
+    "item": "hexdeco:transparent_slate"
+  },
+  "show_notification": true
+}

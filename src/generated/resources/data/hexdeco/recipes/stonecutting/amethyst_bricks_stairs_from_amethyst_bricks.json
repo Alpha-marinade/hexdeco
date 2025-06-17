@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "hexcasting:amethyst_bricks"
+  },
+  "result": "hexdeco:amethyst_bricks_stairs"
+}

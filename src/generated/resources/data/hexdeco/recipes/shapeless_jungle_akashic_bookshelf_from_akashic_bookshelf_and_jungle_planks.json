@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "hexcasting:akashic_bookshelf"
+    },
+    {
+      "item": "minecraft:jungle_planks"
+    }
+  ],
+  "result": {
+    "item": "hexdeco:jungle_akashic_bookshelf"
+  }
+}

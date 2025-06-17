@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "hexcasting:block/deco/slate_tiles",
+    "side": "hexcasting:block/deco/slate_tiles",
+    "top": "hexcasting:block/deco/slate_tiles"
+  }
+}

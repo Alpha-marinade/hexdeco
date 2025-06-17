@@ -1,0 +1,4 @@
+// 1.20.1	2025-06-17T12:22:12.375985	Tags for minecraft:block mod id hexdeco
+539c8c363fbe6dacf4f37b99e6c021263e9378a0 data/minecraft/tags/blocks/mineable/axe.json
+2bb99dca0e1e9a26014da8baf3536f82c18569fd data/minecraft/tags/blocks/mineable/pickaxe.json
+64a5a34ffdd0fd10a63b0f44e2aa3255784fa779 data/minecraft/tags/blocks/needs_iron_tool.json

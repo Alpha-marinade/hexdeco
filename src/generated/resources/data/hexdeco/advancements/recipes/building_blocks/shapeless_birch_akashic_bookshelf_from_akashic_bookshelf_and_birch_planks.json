@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_akashic_bookshelf": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hexcasting:akashic_bookshelf"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_birch_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:birch_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hexdeco:shapeless_birch_akashic_bookshelf_from_akashic_bookshelf_and_birch_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_akashic_bookshelf",
+      "has_birch_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hexdeco:shapeless_birch_akashic_bookshelf_from_akashic_bookshelf_and_birch_planks"
+    ]
+  },
+  "sends_telemetry_event": false
+}
