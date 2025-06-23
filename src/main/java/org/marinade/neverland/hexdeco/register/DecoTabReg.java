@@ -13,7 +13,7 @@ import static org.marinade.neverland.hexdeco.register.DecoBlockReg.*;
 public class DecoTabReg {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-    public static final RegistryObject<CreativeModeTab> HEXDECO_TAB = CREATIVE_MODE_TABS.register("hexdeco", () -> CreativeModeTab.builder().withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> CHARGED_AMETHYST_LAMP_ITEM.get().getDefaultInstance()).title(Component.literal("HexDeco")).displayItems((parameters, output) -> {
+    public static final RegistryObject<CreativeModeTab> HEXDECO_TAB = CREATIVE_MODE_TABS.register("hexdeco", () -> CreativeModeTab.builder().withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> AMETHYST_GLOBE_ITEM.get().getDefaultInstance()).title(Component.literal("HexDeco")).displayItems((parameters, output) -> {
         output.accept(OAK_RUNESHELF_ITEM.get());
 
         output.accept(OAK_RECORD_ITEM.get());
@@ -55,47 +55,52 @@ public class DecoTabReg {
         output.accept(WARPED_RECORD_ITEM.get());
         output.accept(WARPED_LIGATURE_ITEM.get());
 
-        output.accept(AMETHYST_MINI_BRICKS_SLAB_ITEM.get());
-        output.accept(AMETHYST_BRICKS_SLAB_ITEM.get());
-        output.accept(AMETHYST_TILES_SLAB_ITEM.get());
-        output.accept(SLATE_BRICKS_MINI_SLAB_ITEM.get());
-        output.accept( SLATE_BRICKS_SLAB_ITEM.get());
-        output.accept(SLATE_SLAB_ITEM.get());
-        output.accept(SLATE_TILES_SLAB_ITEM.get());
+
 
         output.accept(TRANSPARENT_SLATE_ITEM.get());
 
         output.accept(AMETHYST_MINI_BRICKS_STAIRS_ITEM.get());
+        output.accept(AMETHYST_MINI_BRICKS_SLAB_ITEM.get());
+        output.accept(AMETHYST_BRICKS_SMALL_WALL_ITEM.get());
         output.accept(AMETHYST_BRICKS_STAIRS_ITEM.get());
+        output.accept(AMETHYST_BRICKS_SLAB_ITEM.get());
+        output.accept(AMETHYST_BRICKS_WALL_ITEM.get());
         output.accept(AMETHYST_TILES_STAIRS_ITEM.get());
+        output.accept(AMETHYST_TILES_SLAB_ITEM.get());
+        output.accept(AMETHYST_TILES_WALL_ITEM.get());
         output.accept(SLATE_BRICKS_MINI_STAIRS_ITEM.get());
+        output.accept(SLATE_BRICKS_MINI_SLAB_ITEM.get());
+        output.accept(SLATE_BRICKS_SMALL_WALL_ITEM.get());
         output.accept(SLATE_BRICKS_STAIRS_ITEM.get());
+        output.accept(SLATE_BRICKS_SLAB_ITEM.get());
+        output.accept(SLATE_BRICKS_WALL_ITEM.get());
         output.accept(SLATE_STAIRS_ITEM.get());
+        output.accept(SLATE_SLAB_ITEM.get());
+
+        output.accept(SLATE_WALL_ITEM.get());
         output.accept(SLATE_TILES_STAIRS_ITEM.get());
-
-        output.accept(SLATE_AMETHYST_TILES_SLAB_ITEM.get());
+        output.accept(SLATE_TILES_SLAB_ITEM.get());
+        output.accept(SLATE_TILES_WALL_ITEM.get());
         output.accept(SLATE_AMETHYST_TILES_STAIRS_ITEM.get());
-
+        output.accept(SLATE_AMETHYST_TILES_SLAB_ITEM.get());
+        output.accept(SLATE_AMETHYST_TILES_WALL_ITEM.get());
 
         output.accept(CHARGED_AMETHYST_BLOCK_ITEM.get());
+        output.accept(CHARGED_AMETHYST_STAIRS_ITEM.get());
+        output.accept(CHARGED_AMETHYST_SLAB_ITEM.get());
+        output.accept(CHARGED_WALL_ITEM.get());
+
         output.accept(CHARGED_AMETHYST_BRICKS_ITEM.get());
         output.accept(CHARGED_AMETHYST_LAMP_ITEM.get());
 
-        output.accept(CHARGED_AMETHYST_SLAB_ITEM.get());
+
         output.accept(CHARGED_AMETHYST_BRICKS_SLAB_ITEM.get());
 
-        output.accept(CHARGED_AMETHYST_STAIRS_ITEM.get());
+
         output.accept(CHARGED_AMETHYST_BRICKS_STAIRS_ITEM.get());
 
+        output.accept(AMETHYST_GLOBE_ITEM.get());
 
-        /*
-        output.accept(SLATE_AMETHYST_TILES_STAIRS_ITEM.get());
-        output.accept(SLATE_AMETHYST_BRICKS_STAIRS_ITEM.get());
-        output.accept(SLATE_AMETHYST_MINI_BRICKS_STAIRS_ITEM.get());
-        output.accept(SLATE_AMETHYST_TILES_SLAB_ITEM.get());
-        output.accept(SLATE_AMETHYST_BRICKS_SLAB_ITEM.get());
-        output.accept(SLATE_AMETHYST_MINI_BRICKS_SLAB_ITEM.get());
 
-         */
     }).build());
 }

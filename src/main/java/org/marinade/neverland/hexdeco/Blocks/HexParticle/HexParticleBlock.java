@@ -17,25 +17,19 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.Vec3;
 
 public class HexParticleBlock extends Block {
-    public HexParticleBlock(Properties p_49795_,int light) {
-        super(p_49795_.lightLevel(state -> light));
-    }
-
-    @Override
-    public void onPlace(BlockState state, Level level, BlockPos pos, BlockState p_60569_, boolean p_60570_) {
-        super.onPlace(state, level, pos, p_60569_, p_60570_);
+    public HexParticleBlock(Properties properties,int light) {
+        super(properties);
     }
 
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if(level instanceof ServerLevel server){
-            Vec3 v=new Vec3(0,0,0);
             RandomSource random=level.getRandom();
-            ParticleSpray spray = new ParticleSpray(entity.getOnPos().getCenter().add(v).add(0,0.3,0),
+            ParticleSpray spray = new ParticleSpray(  entity.getPosition(0),
                     new Vec3(
-                            -1.2 + 2.4 * random.nextDouble(),
-                            -1.2 + 2.4 * random.nextDouble(),
-                            -1.2 + 2.4 * random.nextDouble())
+                            -0.5 + 1 * random.nextDouble(),
+                            -0.5 + 1 * random.nextDouble(),
+                            -0.5 + 1 * random.nextDouble())
                     , 0.5,
                     Mth.PI / 2, 10);
             if( Minecraft.getInstance().player!=null){

@@ -175,6 +175,7 @@ public class RecipeGen extends RecipeProvider {
                 "GDG",
                 'G', Items.GLOWSTONE_DUST,
                 'D', HexItems.AMETHYST_DUST,'S',HexBlocks.SLATE).save(consumer,new ResourceLocation(MODID,"transparent_slate"));
+
         addShapedRecipe(DecoBlockReg.CHARGED_AMETHYST_BLOCK_ITEM.get(),
                 "ADA",
                 "DCD",
@@ -189,7 +190,15 @@ public class RecipeGen extends RecipeProvider {
                 'A', Items.IRON_NUGGET,
                 'D', HexItems.AMETHYST_DUST,'C',DecoBlockReg.CHARGED_AMETHYST_BLOCK_ITEM.get()).save(consumer,new ResourceLocation(MODID,"charged_amethyst_lamp"));
 
+        addShapedRecipe(DecoBlockReg.AMETHYST_GLOBE_ITEM.get(),
+                "GDG",
+                "DCD",
+                "SDS",
+                'G',Items.GOLD_INGOT,
+                'D',HexItems.AMETHYST_DUST,'C',HexItems.CHARGED_AMETHYST,'S',HexItems.SLATE).save(consumer,new ResourceLocation(MODID,"amethyst_globe"));
     }
+
+
 
 
     private static void addShapelessBlockRecipe(Consumer<FinishedRecipe> consumer,

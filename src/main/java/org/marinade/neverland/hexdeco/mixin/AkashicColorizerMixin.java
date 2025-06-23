@@ -1,5 +1,4 @@
 package org.marinade.neverland.hexdeco.mixin;
-
 import at.petrak.hexcasting.client.RegisterClientStuff;
 import at.petrak.hexcasting.common.lib.HexBlocks;
 import net.minecraft.world.level.block.Block;
@@ -23,6 +22,5 @@ public class AkashicColorizerMixin {
         if (!(block instanceof Block) || block != HexBlocks.AKASHIC_BOOKSHELF) {
             consumer.accept(color, block);
         }
-
     }
 }

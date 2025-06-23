@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "hexcasting:block/deco/slate_tiles"
+  }
+}

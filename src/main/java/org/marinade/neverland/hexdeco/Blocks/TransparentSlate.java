@@ -76,7 +76,6 @@ public class TransparentSlate extends BlockSlate  implements EntityBlock, Simple
         }
     }
 
-
     @Override
     public ItemStack getCloneItemStack(BlockState state, HitResult target, BlockGetter level, BlockPos pos, Player player) {
         BlockEntity be = level.getBlockEntity(pos);
@@ -93,13 +92,11 @@ public class TransparentSlate extends BlockSlate  implements EntityBlock, Simple
     }
 
     public @Nullable BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-
         return new TransparentSlateEntity(pPos, pState);
     }
 
     @Override
     public BlockState startEnergized(BlockPos pos, BlockState bs, Level world) {
-
         return super.startEnergized(pos, bs, world);
     }
 
@@ -173,7 +170,7 @@ public class TransparentSlate extends BlockSlate  implements EntityBlock, Simple
                         level.setBlock(pos, newState, Block.UPDATE_ALL);
                         BlockEntity entity= level.getBlockEntity(pos);
                         if(entity instanceof TransparentSlateEntity){
-                            ((TransparentSlateEntity) entity).setColor(currentState.getValue(COLOR));
+                            ((TransparentSlateEntity) entity).setColor(newState.getValue(COLOR));
                             entity.setChanged();
                         }
 

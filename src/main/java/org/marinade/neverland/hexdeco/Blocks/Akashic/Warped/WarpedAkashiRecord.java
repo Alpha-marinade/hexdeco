@@ -19,6 +19,7 @@ public class WarpedAkashiRecord extends BlockAkashicRecord {
     public WarpedAkashiRecord(Properties p_49795_) {
         super(p_49795_);
     }
+
     public @Nullable BlockPos addNewDatum(BlockPos herePos, Level level, HexPattern key, Iota datum) {
         BlockPos clobbereePos = AkashicFloodfiller.floodFillFor(herePos, level, (pos, bs, world) -> {
             BlockEntity patt975$temp = world.getBlockEntity(pos);

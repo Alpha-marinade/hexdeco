@@ -13,7 +13,6 @@ import org.marinade.neverland.hexdeco.Entity.Akashic.WarpedAkashicBookshelfEntit
 public class WarpedAkashicBookshelfRenderer implements BlockEntityRenderer<WarpedAkashicBookshelfEntity> {
         public WarpedAkashicBookshelfRenderer(BlockEntityRendererProvider.Context ctx) {
         }
-
         @Override
         public void render(WarpedAkashicBookshelfEntity tile, float pPartialTick, PoseStack ps, MultiBufferSource buffer, int light, int overlay) {
 

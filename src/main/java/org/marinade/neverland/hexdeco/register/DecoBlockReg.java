@@ -24,12 +24,12 @@ import org.marinade.neverland.hexdeco.Blocks.Akashic.Spruce.SpruceAkashiRecord;
 import org.marinade.neverland.hexdeco.Blocks.Akashic.Spruce.SpruceAkashicBookshelfBlock;
 import org.marinade.neverland.hexdeco.Blocks.Akashic.Warped.WarpedAkashiRecord;
 import org.marinade.neverland.hexdeco.Blocks.Akashic.Warped.WarpedAkashicBookshelfBlock;
+import org.marinade.neverland.hexdeco.Blocks.HexGlobe;
 import org.marinade.neverland.hexdeco.Blocks.HexParticle.HexLampBlock;
 import org.marinade.neverland.hexdeco.Blocks.HexParticle.HexParticleBlock;
 import org.marinade.neverland.hexdeco.Blocks.HexParticle.HexParticleSlab;
 import org.marinade.neverland.hexdeco.Blocks.HexParticle.HexParticleStairs;
 import org.marinade.neverland.hexdeco.Blocks.TransparentSlate;
-
 
 import static org.marinade.neverland.hexdeco.Hexdeco.MODID;
 
@@ -152,7 +152,6 @@ public class DecoBlockReg {
     public static final RegistryObject<Block> SLATE_TILES_STAIRS =BLOCKS.register("slate_tiles_stairs",()-> new StairBlock(HexBlocks.SLATE_TILES.defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(2.0F, 4.0F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> SLATE_TILES_STAIRS_ITEM = ITEMS.register("slate_tiles_stairs", () -> new BlockItem(SLATE_TILES_STAIRS.get(), new Item.Properties()));
 
-
     public static final RegistryObject<Block> CHARGED_AMETHYST_BLOCK =BLOCKS.register("charged_amethyst_block",()-> new HexParticleBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK),5));
     public static final RegistryObject<Item>  CHARGED_AMETHYST_BLOCK_ITEM = ITEMS.register("charged_amethyst_block", () -> new BlockItem(CHARGED_AMETHYST_BLOCK.get(), new Item.Properties()));
 
@@ -174,31 +173,41 @@ public class DecoBlockReg {
     public static final RegistryObject<Block> CHARGED_AMETHYST_BRICKS_STAIRS =BLOCKS.register("charged_amethyst_bricks_stairs",()-> new HexParticleStairs(CHARGED_AMETHYST_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK),5));
     public static final RegistryObject<Item>  CHARGED_AMETHYST_BRICKS_STAIRS_ITEM = ITEMS.register("charged_amethyst_bricks_stairs", () -> new BlockItem(CHARGED_AMETHYST_BRICKS_STAIRS.get(), new Item.Properties()));
 
-
     public static final RegistryObject<Block> SLATE_AMETHYST_TILES_SLAB =BLOCKS.register("slate_amethyst_tiles_slab",()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(4.0F, 4.0F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> SLATE_AMETHYST_TILES_SLAB_ITEM = ITEMS.register("slate_amethyst_tiles_slab", () -> new BlockItem(SLATE_AMETHYST_TILES_SLAB.get(), new Item.Properties()));
 
     public static final RegistryObject<Block> SLATE_AMETHYST_TILES_STAIRS =BLOCKS.register("slate_amethyst_tiles_stairs",()-> new StairBlock(HexBlocks.SLATE_AMETHYST_TILES.defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(4.0F, 4.0F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> SLATE_AMETHYST_TILES_STAIRS_ITEM = ITEMS.register("slate_amethyst_tiles_stairs", () -> new BlockItem(SLATE_AMETHYST_TILES_STAIRS.get(), new Item.Properties()));
 
+    public static final RegistryObject<Block> AMETHYST_GLOBE =BLOCKS.register("amethyst_globe",()-> new HexGlobe(BlockBehaviour.Properties.of().strength(1.0F, 1.0F).instabreak()));
+    public static final RegistryObject<Item> AMETHYST_GLOBE_ITEM = ITEMS.register("amethyst_globe", () -> new BlockItem(AMETHYST_GLOBE.get(), new Item.Properties()));
 
-/*
+    public static final RegistryObject<Block> SLATE_TILES_WALL =BLOCKS.register("slate_tiles_wall",()-> new WallBlock(BlockBehaviour.Properties.copy(HexBlocks.SLATE_TILES).forceSolidOn()));
+    public static final RegistryObject<Item> SLATE_TILES_WALL_ITEM = ITEMS.register("slate_tiles_wall", () -> new BlockItem(SLATE_TILES_WALL.get(), new Item.Properties()));
 
-    public static final RegistryObject<Block> SLATE_AMETHYST_BRICKS_STAIRS =BLOCKS.register("slate_amethyst_bricks_stairs",()-> new StairBlock(HexBlocks.SLATE_AMETHYST_BRICKS.defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(4.0F, 4.0F).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Item> SLATE_AMETHYST_BRICKS_STAIRS_ITEM = ITEMS.register("slate_amethyst_bricks_stairs", () -> new BlockItem(SLATE_AMETHYST_BRICKS_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Block> SLATE_BRICKS_WALL =BLOCKS.register("slate_bricks_wall",()-> new WallBlock(BlockBehaviour.Properties.copy(HexBlocks.SLATE_BRICKS).forceSolidOn()));
+    public static final RegistryObject<Item> SLATE_BRICKS_WALL_ITEM = ITEMS.register("slate_bricks_wall", () -> new BlockItem(SLATE_BRICKS_WALL.get(), new Item.Properties()));
 
-   public static final RegistryObject<Block> SLATE_AMETHYST_MINI_BRICKS_STAIRS =BLOCKS.register("slate_amethyst_mini_bricks_stairs",()-> new StairBlock(HexBlocks.SLATE_AMETHYST_BRICKS_SMALL.defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(4.0F, 4.0F).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Item> SLATE_AMETHYST_MINI_BRICKS_STAIRS_ITEM = ITEMS.register("slate_amethyst_mini_bricks_stairs", () -> new BlockItem(SLATE_AMETHYST_MINI_BRICKS_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Block> SLATE_BRICKS_SMALL_WALL =BLOCKS.register("slate_bricks_small_wall",()-> new WallBlock(BlockBehaviour.Properties.copy(HexBlocks.SLATE_BRICKS_SMALL).forceSolidOn()));
+    public static final RegistryObject<Item> SLATE_BRICKS_SMALL_WALL_ITEM = ITEMS.register("slate_bricks_small_wall", () -> new BlockItem(SLATE_BRICKS_SMALL_WALL.get(), new Item.Properties()));
 
-
-    public static final RegistryObject<Block> SLATE_AMETHYST_BRICKS_SLAB =BLOCKS.register("slate_amethyst_bricks_slab",()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(4.0F, 4.0F).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Item> SLATE_AMETHYST_BRICKS_SLAB_ITEM = ITEMS.register("slate_amethyst_bricks_slab", () -> new BlockItem(SLATE_AMETHYST_BRICKS_SLAB .get(), new Item.Properties()));
-
-    public static final RegistryObject<Block> SLATE_AMETHYST_MINI_BRICKS_SLAB =BLOCKS.register("slate_amethyst_mini_bricks_slab",()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(4.0F, 4.0F).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Item> SLATE_AMETHYST_MINI_BRICKS_SLAB_ITEM = ITEMS.register("slate_amethyst_mini_bricks_slab", () -> new BlockItem(SLATE_AMETHYST_MINI_BRICKS_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Block> SLATE_WALL =BLOCKS.register("slate_wall",()-> new WallBlock(BlockBehaviour.Properties.copy(HexBlocks.SLATE_BRICKS_SMALL).forceSolidOn()));
+    public static final RegistryObject<Item> SLATE_WALL_ITEM = ITEMS.register("slate_wall", () -> new BlockItem(SLATE_WALL.get(), new Item.Properties()));
 
 
- */
+    public static final RegistryObject<Block> AMETHYST_BRICKS_WALL =BLOCKS.register("amethyst_bricks_wall",()-> new WallBlock(BlockBehaviour.Properties.copy(HexBlocks.AMETHYST_BRICKS).forceSolidOn()));
+    public static final RegistryObject<Item> AMETHYST_BRICKS_WALL_ITEM = ITEMS.register("amethyst_bricks_wall", () -> new BlockItem(AMETHYST_BRICKS_WALL.get(), new Item.Properties()));
 
+    public static final RegistryObject<Block> AMETHYST_BRICKS_SMALL_WALL =BLOCKS.register("amethyst_bricks_small_wall",()-> new WallBlock(BlockBehaviour.Properties.copy(HexBlocks.AMETHYST_BRICKS_SMALL).forceSolidOn()));
+    public static final RegistryObject<Item> AMETHYST_BRICKS_SMALL_WALL_ITEM = ITEMS.register("amethyst_bricks_small_wall", () -> new BlockItem(AMETHYST_BRICKS_SMALL_WALL.get(), new Item.Properties()));
+
+    public static final RegistryObject<Block> AMETHYST_TILES_WALL =BLOCKS.register("amethyst_tiles_wall",()-> new WallBlock(BlockBehaviour.Properties.copy(HexBlocks.AMETHYST_TILES).forceSolidOn()));
+    public static final RegistryObject<Item> AMETHYST_TILES_WALL_ITEM = ITEMS.register("amethyst_tiles_wall", () -> new BlockItem(AMETHYST_TILES_WALL.get(), new Item.Properties()));
+
+    public static final RegistryObject<Block> SLATE_AMETHYST_TILES_WALL =BLOCKS.register("slate_amethyst_tiles_wall",()-> new WallBlock(BlockBehaviour.Properties.copy(HexBlocks.SLATE_AMETHYST_TILES).forceSolidOn()));
+    public static final RegistryObject<Item> SLATE_AMETHYST_TILES_WALL_ITEM = ITEMS.register("slate_amethyst_tiles_wall", () -> new BlockItem(SLATE_AMETHYST_TILES_WALL.get(), new Item.Properties()));
+
+    public static final RegistryObject<Block> CHARGED_WALL =BLOCKS.register("charged_amethyst_wall",()-> new WallBlock(BlockBehaviour.Properties.copy(HexBlocks.SLATE_AMETHYST_TILES).forceSolidOn()));
+    public static final RegistryObject<Item> CHARGED_WALL_ITEM = ITEMS.register("charged_amethyst_wall", () -> new BlockItem(CHARGED_WALL.get(), new Item.Properties()));
 
 }

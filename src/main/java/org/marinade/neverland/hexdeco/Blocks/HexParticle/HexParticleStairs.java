@@ -19,24 +19,21 @@ import net.minecraft.world.phys.Vec3;
 
 public class HexParticleStairs extends StairBlock {
     public HexParticleStairs(BlockState state, Properties properties,int light) {
-        super(state, properties.lightLevel(stat -> light));
+        super(state, properties);
     }
-    @Override
-    public void onPlace(BlockState state, Level level, BlockPos pos, BlockState p_60569_, boolean p_60570_) {
 
-        super.onPlace(state, level, pos, p_60569_, p_60570_);
-    }
 
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if(level instanceof ServerLevel server) {
             RandomSource random = level.getRandom();
             Vec3 v = new Vec3(0, 0, 0);
+
             v = state.getValue(HALF) == Half.TOP ? v.add(0, 0.3, 0) : v.add(0, -0.3, 0);
             ParticleSpray spray = new ParticleSpray(entity.getOnPos().getCenter().add(0,0.1,0).add(v),
                     new Vec3(
-                            -1.2 + 2.4 * random.nextDouble(),
-                            -1.2 + 2.4 * random.nextDouble(),
-                            -1.2 + 2.4 * random.nextDouble())
+                            -0.5 + 1 * random.nextDouble(),
+                            -0.5 + 1 * random.nextDouble(),
+                            -0.5 + 1 * random.nextDouble())
                     , 0.5,
                     Mth.PI / 2, 10);
             if (Minecraft.getInstance().player != null) {

@@ -23,7 +23,6 @@ public enum HexColor {
     GREEN(14,"hexcasting:dye_colorizer_green", new PatternColors(-11709107,-3616056),glowyStroke(-12148920)),
     RED(15,"hexcasting:dye_colorizer_red", new PatternColors(-11186867,-2963249),glowyStroke(-810848)),
     BLACK(16,"hexcasting:dye_colorizer_black", new PatternColors(-13553359, -9342607), glowyStroke(-14145496)),
-
     AGENDER(17,"hexcasting:pride_colorizer_agender", new PatternColors(-11250604,-2960686),new PatternColors(-14145496,-6229085)),
     AROACE(18,"hexcasting:pride_colorizer_aroace", new PatternColors(-797536,-855136),new PatternColors(-6229005,-8484363)),
     AROMANTIC(19,"hexcasting:pride_colorizer_aromantic", new PatternColors(-12148920,-6229085),new PatternColors(-8289919,-14145496)),
@@ -36,7 +35,6 @@ public enum HexColor {
     GENDERQUEER(26,"hexcasting:pride_colorizer_genderqueer", new PatternColors(-1381654,-6229085), new PatternColors(-1381654,-806425)),
     INTERSEX(27,"hexcasting:pride_colorizer_intersex", new PatternColors(-11184819,-3026232),new PatternColors(-855136,-4621581)),
     LESBIAN(28,"hexcasting:pride_colorizer_lesbian", new PatternColors(-810775,-4621581),new PatternColors(-810848,-797536)),
-
     NONBINARY(29,"hexcasting:pride_colorizer_nonbinary", new PatternColors(-855136,-14145496),new PatternColors(-14145496,-4621581)),
     PANSEXUAL(30,"hexcasting:pride_colorizer_pansexual", new PatternColors(-806425,-855136),new PatternColors(-6229005,-855136)),
     PLURAL(31,"hexcasting:pride_colorizer_plural", new PatternColors(-8484363,-4621581),new PatternColors(-6229015,-14145496)),

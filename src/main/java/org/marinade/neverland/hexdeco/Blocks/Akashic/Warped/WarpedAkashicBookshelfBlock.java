@@ -8,10 +8,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.marinade.neverland.hexdeco.Entity.Akashic.WarpedAkashicBookshelfEntity;
 
 public class WarpedAkashicBookshelfBlock extends BlockAkashicBookshelf {
-
     public WarpedAkashicBookshelfBlock(Properties p_49795_) {
         super(p_49795_);
     }
+
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new WarpedAkashicBookshelfEntity(pPos,pState);

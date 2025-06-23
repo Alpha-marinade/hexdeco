@@ -18,12 +18,8 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.Vec3;
 
 public class HexParticleSlab extends SlabBlock {
-    public HexParticleSlab(Properties p_56359_,int light) {
-        super(p_56359_.lightLevel(state -> light));
-    }
-    @Override
-    public void onPlace(BlockState state, Level level, BlockPos pos, BlockState p_60569_, boolean p_60570_) {
-        super.onPlace(state, level, pos, p_60569_, p_60570_);
+    public HexParticleSlab(Properties properties,int light) {
+        super(properties);
     }
 
     @Override
@@ -34,9 +30,9 @@ public class HexParticleSlab extends SlabBlock {
             v=state.getValue(TYPE)== SlabType.TOP?v.add(0,0.25,0):v.add(0,-0.25,0);
             ParticleSpray spray = new ParticleSpray(entity.getOnPos().getCenter().add(0,0.1,0).add(v),
                     new Vec3(
-                            -1.2 + 2.4 * random.nextDouble(),
-                            -1.2 + 2.4 * random.nextDouble(),
-                            -1.2 + 2.4 * random.nextDouble())
+                            -0.5 + 1 * random.nextDouble(),
+                            -0.5 + 1 * random.nextDouble(),
+                            -0.5 + 1 * random.nextDouble())
                     , 0.5,
                     Mth.PI / 2, 10);
             if( Minecraft.getInstance().player!=null){

@@ -37,121 +37,123 @@ public class BookshelfPatternRenderer {
 
     public BookshelfPatternRenderer() {
     }
+
     public static void renderPatternForAkashicBookshelf(OakAkashicBookshelfEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
-        int facing = ((Direction)bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
+        int facing = (bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
         ps.pushPose();
         ps.mulPose(Axis.ZP.rotationDegrees(180.0F));
         Vec3i tV = BLOCK_FACINGS[facing % 4];
         ps.translate((float)tV.getX(), (float)tV.getY(), (float)tV.getZ());
         ps.mulPose(Axis.YP.rotationDegrees((float)WALL_ROTATIONS[facing % 4]));
-        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative((Direction)bs.getValue(BlockAkashicBookshelf.FACING)));
-        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR, (double)tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
+        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative(bs.getValue(BlockAkashicBookshelf.FACING)));
+        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR,tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
         ps.popPose();
     }
     public static void renderPatternForAkashicBookshelf(DarkOakAkashicBookshelfEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
-        int facing = ((Direction)bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
+        int facing = (bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
         ps.pushPose();
         ps.mulPose(Axis.ZP.rotationDegrees(180.0F));
         Vec3i tV = BLOCK_FACINGS[facing % 4];
         ps.translate((float)tV.getX(), (float)tV.getY(), (float)tV.getZ());
         ps.mulPose(Axis.YP.rotationDegrees((float)WALL_ROTATIONS[facing % 4]));
-        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative((Direction)bs.getValue(BlockAkashicBookshelf.FACING)));
-        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR, (double)tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
+        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative(bs.getValue(BlockAkashicBookshelf.FACING)));
+        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR,tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
         ps.popPose();
     }
     public static void renderPatternForAkashicBookshelf(SpruceAkashicBookshelfEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
-        int facing = ((Direction)bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
+        int facing = (bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
         ps.pushPose();
         ps.mulPose(Axis.ZP.rotationDegrees(180.0F));
         Vec3i tV = BLOCK_FACINGS[facing % 4];
         ps.translate((float)tV.getX(), (float)tV.getY(), (float)tV.getZ());
         ps.mulPose(Axis.YP.rotationDegrees((float)WALL_ROTATIONS[facing % 4]));
-        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative((Direction)bs.getValue(BlockAkashicBookshelf.FACING)));
-        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR, (double)tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
+        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative(bs.getValue(BlockAkashicBookshelf.FACING)));
+        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR,tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
         ps.popPose();
     }
     public static void renderPatternForAkashicBookshelf(WarpedAkashicBookshelfEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
-        int facing = ((Direction)bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
+        int facing = (bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
         ps.pushPose();
         ps.mulPose(Axis.ZP.rotationDegrees(180.0F));
         Vec3i tV = BLOCK_FACINGS[facing % 4];
         ps.translate((float)tV.getX(), (float)tV.getY(), (float)tV.getZ());
         ps.mulPose(Axis.YP.rotationDegrees((float)WALL_ROTATIONS[facing % 4]));
-        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative((Direction)bs.getValue(BlockAkashicBookshelf.FACING)));
-        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR, (double)tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
+        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative(bs.getValue(BlockAkashicBookshelf.FACING)));
+        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR,tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
         ps.popPose();
     }
     public static void renderPatternForAkashicBookshelf(BambooAkashicBookshelfEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
-        int facing = ((Direction)bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
+        int facing = (bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
         ps.pushPose();
         ps.mulPose(Axis.ZP.rotationDegrees(180.0F));
         Vec3i tV = BLOCK_FACINGS[facing % 4];
         ps.translate((float)tV.getX(), (float)tV.getY(), (float)tV.getZ());
         ps.mulPose(Axis.YP.rotationDegrees((float)WALL_ROTATIONS[facing % 4]));
-        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative((Direction)bs.getValue(BlockAkashicBookshelf.FACING)));
-        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR, (double)tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
+        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative(bs.getValue(BlockAkashicBookshelf.FACING)));
+        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR,tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
         ps.popPose();
     }
     public static void renderPatternForAkashicBookshelf(BirchAkashicBookshelfEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
-        int facing = ((Direction)bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
+        int facing = (bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
         ps.pushPose();
         ps.mulPose(Axis.ZP.rotationDegrees(180.0F));
         Vec3i tV = BLOCK_FACINGS[facing % 4];
         ps.translate((float)tV.getX(), (float)tV.getY(), (float)tV.getZ());
         ps.mulPose(Axis.YP.rotationDegrees((float)WALL_ROTATIONS[facing % 4]));
-        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative((Direction)bs.getValue(BlockAkashicBookshelf.FACING)));
-        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR, (double)tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
+        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative(bs.getValue(BlockAkashicBookshelf.FACING)));
+        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR,tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
         ps.popPose();
     }
     public static void renderPatternForAkashicBookshelf(CrimsonAkashicBookshelfEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
-        int facing = ((Direction)bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
+        int facing = (bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
         ps.pushPose();
         ps.mulPose(Axis.ZP.rotationDegrees(180.0F));
         Vec3i tV = BLOCK_FACINGS[facing % 4];
         ps.translate((float)tV.getX(), (float)tV.getY(), (float)tV.getZ());
         ps.mulPose(Axis.YP.rotationDegrees((float)WALL_ROTATIONS[facing % 4]));
-        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative((Direction)bs.getValue(BlockAkashicBookshelf.FACING)));
-        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR, (double)tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
+        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative(bs.getValue(BlockAkashicBookshelf.FACING)));
+        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR,tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
         ps.popPose();
     }
     public static void renderPatternForAkashicBookshelf(MangroveAkashicBookshelfEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
-        int facing = ((Direction)bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
+        int facing = (bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
         ps.pushPose();
         ps.mulPose(Axis.ZP.rotationDegrees(180.0F));
         Vec3i tV = BLOCK_FACINGS[facing % 4];
         ps.translate((float)tV.getX(), (float)tV.getY(), (float)tV.getZ());
         ps.mulPose(Axis.YP.rotationDegrees((float)WALL_ROTATIONS[facing % 4]));
-        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative((Direction)bs.getValue(BlockAkashicBookshelf.FACING)));
-        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR, (double)tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
+        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative(bs.getValue(BlockAkashicBookshelf.FACING)));
+        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR,tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
         ps.popPose();
     }
     public static void renderPatternForAkashicBookshelf(JungleAkashicBookshelfEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
-        int facing = ((Direction)bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
+        int facing = (bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
         ps.pushPose();
         ps.mulPose(Axis.ZP.rotationDegrees(180.0F));
         Vec3i tV = BLOCK_FACINGS[facing % 4];
         ps.translate((float)tV.getX(), (float)tV.getY(), (float)tV.getZ());
         ps.mulPose(Axis.YP.rotationDegrees((float)WALL_ROTATIONS[facing % 4]));
-        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative((Direction)bs.getValue(BlockAkashicBookshelf.FACING)));
-        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR, (double)tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
+        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative(bs.getValue(BlockAkashicBookshelf.FACING)));
+        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR,tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
         ps.popPose();
     }
     public static void renderPatternForAkashicBookshelf(CherryAkashicBookshelfEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
-        int facing = ((Direction)bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
+        int facing = (bs.getValue(BlockAkashicBookshelf.FACING)).get2DDataValue();
         ps.pushPose();
         ps.mulPose(Axis.ZP.rotationDegrees(180.0F));
         Vec3i tV = BLOCK_FACINGS[facing % 4];
         ps.translate((float)tV.getX(), (float)tV.getY(), (float)tV.getZ());
         ps.mulPose(Axis.YP.rotationDegrees((float)WALL_ROTATIONS[facing % 4]));
-        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative((Direction)bs.getValue(BlockAkashicBookshelf.FACING)));
-        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR, (double)tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
+        int actualLight = LevelRenderer.getLightColor(tile.getLevel(), tile.getBlockPos().relative(bs.getValue(BlockAkashicBookshelf.FACING)));
+        renderPattern(pattern, WORLDLY_SETTINGS, PatternColors.DEFAULT_PATTERN_COLOR,tile.getBlockPos().hashCode(), ps, buffer, WALL_NORMALS[facing % 4].multiply((double)-1.0F, (double)-1.0F, (double)-1.0F), -0.02F, actualLight, 1);
         ps.popPose();
     }
     public static void renderPatternForSlate(TransparentSlateEntity tile, HexPattern pattern, PoseStack ps, MultiBufferSource buffer, int light, BlockState bs) {
+
         boolean isOnWall = bs.getValue(BlockSlate.ATTACH_FACE) == AttachFace.WALL;
         boolean isOnCeiling = bs.getValue(BlockSlate.ATTACH_FACE) == AttachFace.CEILING;
-        int facing = ((Direction)bs.getValue(BlockSlate.FACING)).get2DDataValue();
-        boolean wombly = (Boolean)bs.getValue(BlockSlate.ENERGIZED);
+        int facing = (bs.getValue(BlockSlate.FACING)).get2DDataValue();
+        boolean wombly = bs.getValue(BlockSlate.ENERGIZED);
         ps.pushPose();
         Vec3 normal = null;
         if (isOnWall) {
@@ -170,14 +172,14 @@ public class BookshelfPatternRenderer {
             }
         }
 
-        renderPattern(pattern, wombly ? WORLDLY_SETTINGS_WOBBLY : WORLDLY_SETTINGS, wombly ? HexColor.getById(tile.getColor()).getOnColor() : HexColor.getById(tile.getColor()).getOffColor(), (double)tile.getBlockPos().hashCode(), ps, buffer, normal, (Float)null, light, 1);
+        renderPattern(pattern, wombly ? WORLDLY_SETTINGS_WOBBLY : WORLDLY_SETTINGS, wombly ? HexColor.getById(tile.getColor()).getOnColor() : HexColor.getById(tile.getColor()).getOffColor(),tile.getBlockPos().hashCode(), ps, buffer, normal, (Float)null, light, 1);
         ps.popPose();
     }
 
     public static void renderPattern(HexPattern pattern, PatternSettings patSets, PatternColors patColors, double seed, PoseStack ps, MultiBufferSource bufSource, Vec3 normal, @Nullable Float zOffset, int light, int blockSize) {
         ps.pushPose();
         float z = zOffset != null ? zOffset : -0.0725F;
-        normal = normal != null ? normal : new Vec3((double)0.0F, (double)0.0F, (double)-1.0F);
+        normal = normal != null ? normal : new Vec3(0.0F,0.0F,-1.0F);
         ps.translate(0.0F, 0.0F, z);
         ps.scale((float)blockSize, (float)blockSize, 1.0F);
         PoseStack noNormalInv = new PoseStack();
@@ -188,13 +190,13 @@ public class BookshelfPatternRenderer {
     }
 
     static {
-        SCROLL_SETTINGS = new PatternSettings("scroll", PositionSettings.paddedSquare((double)0.125F), StrokeSettings.fromStroke(0.05), ZappySettings.STATIC);
-        READABLE_SCROLL_SETTINGS = new PatternSettings("scroll_readable", PositionSettings.paddedSquare((double)0.125F), StrokeSettings.fromStroke(0.05), ZappySettings.READABLE);
-        WORLDLY_SETTINGS = new PatternSettings("worldly", PositionSettings.paddedSquare((double)0.125F), StrokeSettings.fromStroke(0.05), ZappySettings.STATIC);
-        WORLDLY_SETTINGS_WOBBLY = new PatternSettings("wobbly_world", PositionSettings.paddedSquare((double)0.125F), StrokeSettings.fromStroke(0.05), ZappySettings.WOBBLY);
+        SCROLL_SETTINGS = new PatternSettings("scroll", PositionSettings.paddedSquare(0.125F), StrokeSettings.fromStroke(0.05), ZappySettings.STATIC);
+        READABLE_SCROLL_SETTINGS = new PatternSettings("scroll_readable", PositionSettings.paddedSquare(0.125F), StrokeSettings.fromStroke(0.05), ZappySettings.READABLE);
+        WORLDLY_SETTINGS = new PatternSettings("worldly", PositionSettings.paddedSquare(0.125F), StrokeSettings.fromStroke(0.05), ZappySettings.STATIC);
+        WORLDLY_SETTINGS_WOBBLY = new PatternSettings("wobbly_world", PositionSettings.paddedSquare(0.125F), StrokeSettings.fromStroke(0.05), ZappySettings.WOBBLY);
         WALL_ROTATIONS = new int[]{180, 270, 0, 90};
         SLATE_FACINGS = new Vec3i[]{new Vec3i(0, -1, 0), new Vec3i(-1, -1, 0), new Vec3i(-1, -1, 1), new Vec3i(0, -1, 1)};
-        WALL_NORMALS = new Vec3[]{new Vec3((double)0.0F, (double)0.0F, (double)-1.0F), new Vec3((double)-1.0F, (double)0.0F, (double)0.0F), new Vec3((double)0.0F, (double)0.0F, (double)-1.0F), new Vec3((double)-1.0F, (double)0.0F, (double)0.0F)};
+        WALL_NORMALS = new Vec3[]{new Vec3(0.0F, 0.0F, -1.0F), new Vec3(-1.0F, 0.0F,0.0F), new Vec3(0.0F, 0.0F, -1.0F), new Vec3(-1.0F, 0.0F,0.0F)};
         SLATE_FLOORCEIL_FACINGS = new Vec3i[]{new Vec3i(0, 0, 0), new Vec3i(1, 0, 0), new Vec3i(1, 0, 1), new Vec3i(0, 0, 1)};
         BLOCK_FACINGS = new Vec3i[]{new Vec3i(0, -1, 1), new Vec3i(0, -1, 0), new Vec3i(-1, -1, 0), new Vec3i(-1, -1, 1)};
     }

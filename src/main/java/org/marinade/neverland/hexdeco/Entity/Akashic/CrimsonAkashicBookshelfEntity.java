@@ -15,11 +15,8 @@ import static org.marinade.neverland.hexdeco.register.DecoEntityReg.*;
 
 public class CrimsonAkashicBookshelfEntity extends HexBlockEntity {
     public static final String TAG_PATTERN = "pattern";
-    public static final String TAG_IOTA = "iota";
-    public static final String TAG_DUMMY = "dummy";
     private HexPattern pattern = null;
     private CompoundTag iotaTag = null;
-    public HexPatternPoints points;
 
     public CrimsonAkashicBookshelfEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(CRIMSON_RUNESHELF_TILE.get(), pWorldPosition, pBlockState);
@@ -39,7 +36,7 @@ public class CrimsonAkashicBookshelfEntity extends HexBlockEntity {
         this.iotaTag = IotaType.serialize(iota);
         if (previouslyEmpty) {
             BlockState oldBs = this.getBlockState();
-            BlockState newBs = (BlockState)oldBs.setValue(BlockAkashicBookshelf.HAS_BOOKS, true);
+            BlockState newBs = oldBs.setValue(BlockAkashicBookshelf.HAS_BOOKS, true);
             this.level.setBlock(this.getBlockPos(), newBs, 3);
             this.level.sendBlockUpdated(this.getBlockPos(), oldBs, newBs, 3);
         } else {
@@ -53,7 +50,7 @@ public class CrimsonAkashicBookshelfEntity extends HexBlockEntity {
         this.iotaTag = null;
         if (!previouslyEmpty) {
             BlockState oldBs = this.getBlockState();
-            BlockState newBs = (BlockState)oldBs.setValue(BlockAkashicBookshelf.HAS_BOOKS, false);
+            BlockState newBs = oldBs.setValue(BlockAkashicBookshelf.HAS_BOOKS, false);
             this.level.setBlock(this.getBlockPos(), newBs, 3);
             this.level.sendBlockUpdated(this.getBlockPos(), oldBs, newBs, 3);
         } else {

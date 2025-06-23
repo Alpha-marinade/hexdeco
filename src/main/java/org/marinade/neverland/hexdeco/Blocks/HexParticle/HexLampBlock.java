@@ -16,8 +16,9 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.Vec3;
 
 public class HexLampBlock extends Block {
-    public HexLampBlock(Properties p_49795_,int light) {
-        super(p_49795_.lightLevel(state -> light));
+
+    public HexLampBlock(Properties properties,int light) {
+        super(properties.lightLevel(state -> light));
     }
 
     @Override
@@ -31,7 +32,7 @@ public class HexLampBlock extends Block {
         Vec3 v=new Vec3(0,0,0);
         ParticleSpray spray = new ParticleSpray(pos.getCenter().add(v),
                 new Vec3(
-                        -1.2 + 2.4 * random.nextDouble(),
+                        -1 + 2.4 * random.nextDouble(),
                         -1.2 + 2.4 * random.nextDouble(),
                         -1.2 + 2.4 * random.nextDouble())
                 , 0.5,
@@ -43,21 +44,5 @@ public class HexLampBlock extends Block {
         super.tick(state,level,pos,random);
     }
 
-    @Override
-    public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
-        if(level instanceof ServerLevel server){
-            Vec3 v=new Vec3(0,0,0);
-            ParticleSpray spray = new ParticleSpray(pos.getCenter().add(v),
-                    new Vec3(
-                            0,
-                            1.5,
-                            0)
-                    , 0.5,
-                    Mth.PI / 2, 50);
-            if( Minecraft.getInstance().player!=null){
-                spray.sprayParticles(server, new FrozenPigment(HexItems.DEFAULT_PIGMENT.getDefaultInstance(), Minecraft.getInstance().player.getUUID()));
-            }
-        }
-        return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
-    }
+
 }
