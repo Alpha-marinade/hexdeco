@@ -168,7 +168,6 @@ public class RecipeGen extends RecipeProvider {
         addStonecutterRecipe(consumer,DecoBlockReg.CHARGED_AMETHYST_STAIRS.get(),DecoBlockReg.CHARGED_AMETHYST_BLOCK_ITEM.get(),1);
         addStonecutterRecipe(consumer,DecoBlockReg.CHARGED_AMETHYST_BRICKS_STAIRS.get(),DecoBlockReg.CHARGED_AMETHYST_BRICKS.get(),1);
 
-
         addShapedRecipe(DecoBlockReg.TRANSPARENT_SLATE_ITEM.get(),
                 "GDG",
                 "DSD",
@@ -197,8 +196,6 @@ public class RecipeGen extends RecipeProvider {
                 'G',Items.GOLD_INGOT,
                 'D',HexItems.AMETHYST_DUST,'C',HexItems.CHARGED_AMETHYST,'S',HexItems.SLATE).save(consumer,new ResourceLocation(MODID,"amethyst_globe"));
     }
-
-
 
 
     private static void addShapelessBlockRecipe(Consumer<FinishedRecipe> consumer,
